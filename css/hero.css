@@ -1,0 +1,442 @@
+
+
+.hero {
+    width: 100%;
+    height: 720px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: var(--nav-bg);
+    color: var(--nav-text);
+}
+
+
+
+.hero-slider {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+}
+
+
+
+
+.hero-slide {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    display: grid;
+
+    grid-template-columns:
+        50%
+        50%;
+
+    opacity: 0;
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transform: translateX(30px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease,
+        visibility 0.8s ease;
+}
+
+
+.hero-slide.active {
+    opacity: 1;
+    visibility: visible;
+
+    pointer-events: auto;
+
+    transform: translateX(0);
+}
+
+
+
+.hero-image-side {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background: #101010;
+}
+
+
+
+.hero-image-frame {
+    height: 92%;
+
+    aspect-ratio: 9 / 16;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    background: #000000;
+
+    transform: translateX(-25px);
+
+    transition:
+        transform 0.9s ease;
+}
+
+
+.hero-slide.active .hero-image-frame {
+    transform: translateX(0);
+}
+
+
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+
+    transform: scale(1.04);
+
+    transition:
+        transform 10s linear;
+}
+
+
+.hero-slide.active .hero-image {
+    transform: scale(1);
+}
+
+
+
+.hero-content-side {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--nav-bg);
+}
+
+
+
+.hero-content {
+    width: 72%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 20px;
+
+    color: var(--nav-text);
+
+    opacity: 0;
+
+    transform: translateX(40px);
+
+    transition:
+        transform 0.9s ease,
+        opacity 0.9s ease;
+}
+
+
+.hero-slide.active .hero-content {
+    opacity: 1;
+
+    transform: translateX(0);
+}
+
+
+
+.hero-content h1 {
+    width: 100%;
+
+    color: var(--nav-text);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(
+        42px,
+        5vw,
+        76px
+    );
+
+    line-height: 1.05;
+
+    font-weight: 600;
+}
+
+
+
+.hero-content p {
+    width: min(
+        100%,
+        520px
+    );
+
+    color: var(--nav-muted);
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+
+
+
+.hero-button {
+    min-width: 160px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: var(--reservation-bg);
+    color: var(--reservation-text);
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+
+.hero-button:hover {
+    transform: translateY(-2px);
+
+    opacity: 0.88;
+}
+
+
+
+
+.hero-dots {
+    position: absolute;
+
+    left: 75%;
+    bottom: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    transform: translateX(-50%);
+}
+
+
+
+.hero-dot {
+    width: 9px;
+    height: 9px;
+
+    border: 1px solid var(--nav-muted);
+    border-radius: 50%;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    transition:
+        width 0.35s ease,
+        background 0.35s ease,
+        border-color 0.35s ease,
+        transform 0.35s ease;
+}
+
+
+.hero-dot:hover {
+    transform: scale(1.25);
+}
+
+
+.hero-dot.active {
+    width: 30px;
+
+    border-color: var(--nav-text);
+    border-radius: 10px;
+
+    background: var(--nav-text);
+}
+
+
+
+@media (max-width: 900px) {
+    .hero {
+        height: auto;
+        min-height: 0;
+    }
+
+    .hero-slider {
+        height: clamp(455px, 68vw, 590px);
+    }
+
+    .hero-slide {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: 56% 44%;
+        transform: translateX(20px);
+    }
+
+    .hero-image-side {
+        min-width: 0;
+        height: 100%;
+        grid-row: 1;
+    }
+
+    .hero-image-frame {
+        width: 100%;
+        height: 100%;
+        aspect-ratio: auto;
+        border-radius: 0;
+        transform: translateX(0);
+    }
+
+    .hero-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .hero-content-side {
+        min-width: 0;
+        height: 100%;
+        grid-row: 2;
+        padding: 16px 20px 40px;
+    }
+
+    .hero-content {
+        width: min(100%, 650px);
+        align-items: center;
+        text-align: center;
+        gap: 12px;
+        transform: translateY(18px);
+    }
+
+    .hero-slide.active .hero-content {
+        transform: translateY(0);
+    }
+
+    .hero-content h1 {
+        margin: 0;
+        font-size: clamp(29px, 5.5vw, 43px);
+        line-height: 1.12;
+    }
+
+    .hero-content p {
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .hero-button {
+        min-width: 145px;
+        height: 42px;
+        font-size: 13px;
+    }
+
+    .hero-dots {
+        left: 50%;
+        bottom: 12px;
+        transform: translateX(-50%);
+        z-index: 2;
+    }
+}
+
+
+
+@media (max-width: 600px) {
+    .hero-slider {
+        height: clamp(440px, 104vw, 520px);
+    }
+
+    .hero-slide {
+        grid-template-rows: 54% 46%;
+    }
+
+    .hero-content-side {
+        padding: 10px 16px 34px;
+    }
+
+    .hero-content {
+        width: 100%;
+        gap: 9px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(25px, 6vw, 34px);
+        line-height: 1.1;
+    }
+
+    .hero-content p {
+        font-size: 12px;
+        line-height: 1.45;
+    }
+
+    .hero-button {
+        min-width: 135px;
+        height: 39px;
+        font-size: 12px;
+    }
+
+    .hero-dots {
+        bottom: 10px;
+    }
+}
+
+@media (max-width: 360px) {
+    .hero-slider {
+        height: 450px;
+    }
+    .hero-content h1 {
+        font-size: 25px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-slide,
+    .hero-image,
+    .hero-image-frame,
+    .hero-content,
+    .hero-dot {
+        transition: none;
+    }
+}
+
+.hero {
+    z-index: 1;
+}

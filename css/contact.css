@@ -1,0 +1,381 @@
+
+.contact-section {
+    width: 100%;
+    min-height: 620px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--nav-bg);
+    color: var(--nav-text);
+}
+
+
+
+.contact-container {
+    width: min(1200px, 92%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 40px;
+}
+
+
+.contact-header {
+    width: min(820px, 92%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 12px;
+
+    text-align: center;
+}
+
+
+.contact-small-title {
+    color: var(--nav-muted);
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+
+.contact-header h2 {
+    color: var(--nav-text);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(
+        36px,
+        4vw,
+        56px
+    );
+
+    line-height: 1.1;
+
+    font-weight: 600;
+}
+
+
+.contact-header p {
+    width: 88%;
+
+    color: var(--nav-muted);
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+
+.contact-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+
+.contact-card {
+    min-width: 0;
+    min-height: 220px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 14px;
+
+    border-radius: 24px;
+
+    background: var(--control-bg);
+
+    color: var(--nav-text);
+
+    text-decoration: none;
+
+    text-align: center;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+
+.contact-card:hover {
+    transform: translateY(-5px);
+
+    background: var(--control-hover);
+}
+
+
+.contact-icon {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--nav-bg);
+
+    color: var(--nav-text);
+
+    font-size: 22px;
+}
+
+
+.contact-location-icon {
+    width: 22px;
+    height: 22px;
+
+    display: block;
+}
+
+
+
+.contact-card h3 {
+    color: var(--nav-text);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 21px;
+}
+
+
+.contact-card span {
+    max-width: 82%;
+
+    color: var(--nav-muted);
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    overflow-wrap: anywhere;
+}
+
+
+
+body.darkmode
+.contact-card {
+    background: #1d1d1d;
+}
+
+
+body.darkmode
+.contact-card:hover {
+    background: #242424;
+}
+
+
+@media (max-width: 900px) {
+
+    .contact-section {
+        min-height: 700px;
+    }
+
+
+    .contact-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 12px;
+    }
+
+
+    .contact-card {
+        min-height: 200px;
+    }
+
+
+    .contact-card:last-child {
+        grid-column: 1 / 3;
+    }
+
+}
+
+
+
+@media (max-width: 650px) {
+
+    .contact-section {
+        min-height: 850px;
+    }
+
+
+    .contact-container {
+        width: 90%;
+
+        gap: 30px;
+    }
+
+
+    .contact-header h2 {
+        font-size: 32px;
+    }
+
+
+    .contact-header p {
+        width: 92%;
+
+        font-size: 13px;
+    }
+
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+
+    .contact-card {
+        min-height: 190px;
+    }
+
+
+    .contact-card:last-child {
+        grid-column: auto;
+    }
+
+}
+
+
+
+@media (max-width: 350px) {
+
+    .contact-header h2 {
+        font-size: 27px;
+    }
+
+
+    .contact-card {
+        min-height: 170px;
+
+        gap: 10px;
+    }
+
+
+    .contact-icon {
+        width: 46px;
+        height: 46px;
+
+        font-size: 19px;
+    }
+
+
+    .contact-card h3 {
+        font-size: 18px;
+    }
+
+
+    .contact-card span {
+        font-size: 12px;
+    }
+
+}
+
+
+@media (max-width: 280px) {
+
+    .contact-section {
+        min-height: 760px;
+    }
+
+
+    .contact-container {
+        width: 92%;
+
+        gap: 22px;
+    }
+
+
+    .contact-header h2 {
+        font-size: 22px;
+    }
+
+
+    .contact-header p {
+        font-size: 11px;
+    }
+
+
+    .contact-card {
+        min-height: 155px;
+
+        gap: 8px;
+
+        border-radius: 18px;
+    }
+
+
+    .contact-icon {
+        width: 42px;
+        height: 42px;
+
+        font-size: 17px;
+    }
+
+
+    .contact-location-icon {
+        width: 18px;
+        height: 18px;
+    }
+
+
+    .contact-card h3 {
+        font-size: 17px;
+    }
+
+
+    .contact-card span {
+        font-size: 11px;
+    }
+
+}
+
+
+.contact-card[href^="tel:"],
+.contact-card[href^="mailto:"] {
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+
+.contact-card[href^="tel:"] span,
+.contact-card[href^="mailto:"] span {
+    transition:
+        font-weight 0.2s ease,
+        text-decoration-color 0.2s ease;
+}
+
+
+.contact-card[href^="tel:"]:hover span,
+.contact-card[href^="mailto:"]:hover span {
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}

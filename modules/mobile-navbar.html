@@ -1,0 +1,143 @@
+<header class="mobile-navbar">
+
+    <div class="mobile-navbar-container">
+
+        <!-- LOGO -->
+        <a href="index.html" class="mobile-navbar-logo">
+            <div class="mobile-navbar-logo-icon">R</div>
+        </a>
+
+
+        <!-- ACTIONS -->
+        <div class="mobile-navbar-actions">
+
+            <!-- LANGUAGE -->
+            <div class="mobile-navbar-language-wrapper">
+
+                <select
+                    id="mobile-language-switch"
+                    class="mobile-navbar-language-select"
+                >
+                    <option value="tr">TR</option>
+                    <option value="en">EN</option>
+                    <option value="fr">FR</option>
+                    <option value="es">ES</option>
+                    <option value="ru">RU</option>
+                    <option value="ar">AR</option>
+                </select>
+
+            </div>
+
+
+            <!-- THEME -->
+            <button
+                type="button"
+                class="mobile-navbar-theme-button"
+                id="mobile-theme-switch"
+                aria-label="Tema değiştir"
+            >
+
+                <img
+                    src="assets/dark_mode.png"
+                    alt="Dark mode"
+                    class="mobile-dark-icon"
+                >
+
+                <img
+                    src="assets/light_mode.png"
+                    alt="Light mode"
+                    class="mobile-light-icon"
+                >
+
+            </button>
+
+
+            <!-- HAMBURGER -->
+            <button
+                type="button"
+                class="mobile-navbar-menu-button"
+                id="mobileMenuButton"
+                aria-label="Menüyü aç"
+                aria-expanded="false"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- OVERLAY HEADER DIŞINDA -->
+<div
+    class="mobile-navbar-overlay"
+    id="mobileNavbarOverlay"
+></div>
+
+
+<!-- SIDEBAR HEADER DIŞINDA -->
+<aside
+    class="mobile-navbar-menu"
+    id="mobileNavbarMenu"
+>
+
+    <button
+        type="button"
+        class="mobile-navbar-close-button"
+        id="mobileNavbarCloseButton"
+        aria-label="Menüyü kapat"
+    >
+        <span></span>
+        <span></span>
+    </button>
+
+
+    <nav class="mobile-navbar-navigation">
+
+        <a
+            href="#home"
+            class="mobile-navbar-link active"
+            data-i18n="home"
+        >
+            Ana Sayfa
+        </a>
+
+        <a
+            href="#menu"
+            class="mobile-navbar-link"
+            data-i18n="menu"
+        >
+            Menü
+        </a>
+
+        <a
+            href="#about"
+            class="mobile-navbar-link"
+            data-i18n="about"
+        >
+            Hakkımızda
+        </a>
+
+        <a
+            href="#contact"
+            class="mobile-navbar-link"
+            data-i18n="contact"
+        >
+            İletişim
+        </a>
+
+        <a
+            href="#reservation"
+            class="mobile-navbar-reservation"
+            data-i18n="reservation"
+        >
+            Rezervasyon Yap
+        </a>
+
+    </nav>
+
+</aside>
