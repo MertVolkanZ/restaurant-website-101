@@ -70,7 +70,7 @@ Kodları kendi projem üzerinde düzenleyerek geliştirmeye devam ettim.
 
 GitHub: https://github.com/MertVolkanZ/restaurant-website-101
 
-Canlı Site: https://app.netlify.com/projects/frabjous-cuchufli-06fe01/deploys/6afa169ac6c27170b603d170
+Canlı Site: https://frabjous-cuchufli-06fe01.netlify.app/
 
 ## Not
 
