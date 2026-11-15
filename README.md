@@ -75,3 +75,15 @@ Canlı Site:
 ## Not
 
 Bu web sitesi eğitim amacıyla hazırlanmıştır. Restoran ve içerikleri örnek olarak oluşturulmuştur.
+
+## Görsel Kaynaklar ve Tasarım
+
+Projede kullanılan bazı görseller ve ikonlar aşağıdaki kaynaklardan alınmıştır:
+
+- [Pexels](https://www.pexels.com/) - Restoran ve yemek fotoğrafları
+- [Icons8](https://icons8.com/) - Bayrak ve arayüz ikonları
+- [Google Görseller](https://images.google.com/) - Görsel araştırması
+
+Arayüz tasarımında farklı restoran web sitelerinden, özellikle [Midpoint](https://www.midpoint.com.tr/) gibi restoranların web tasarımlarından ilham alınmıştır.
+
+Tasarım ve kodlama çalışmaları proje kapsamında geliştirilmiştir.
